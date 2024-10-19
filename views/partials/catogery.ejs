@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doctors - ABC Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      body {
+        background-color: black;
+        color: aliceblue;
+        font-family: Arial, sans-serif;
+      }
+      .header {
+        width: 100%;
+        height: 60px;
+        background-color: black;
+        color: aliceblue;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        border-bottom: 1px solid aliceblue;
+        font-size: 1.3rem;
+    }
+    .header h1 {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .header svg {
+        margin-right: 10px;
+    }
+      .heading {
+        margin: 40px 0;
+        text-align: center;
+        font-size: 3rem;
+        color: aliceblue;
+      }
+      .card {
+        margin: 10px;
+      }
+      .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+      .btn-dark {
+        width: 100%;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <section id="headsection">
+      <div class="header">
+        <h1>
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-command" viewBox="0 0 16 16">
+            <path d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3M6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5zm4 1v4H6V6zm1-1V3.5A1.5 1.5 0 1 1 12.5 5zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11z"/>
+          </svg>
+          ABC Hospital
+        </h1>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <div class="heading">
+      <% if(locals.FirstName) { %>
+        <h1>Hello, <%= FirstName %>!</h1>
+      <% } %>
+    </div>
+
+    <!-- Doctors Categories -->
+    <section id="categories">
+      <div class="container my-5">
+        <div class="row">
+          <!-- Cardiologist Card -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="card">
+              <img src="images/cardiology.webp" class="card-img-top" alt="Cardiologist">
+              <div class="card-body">
+                <h4 class="card-title">Cardiologist</h4>
+                <a href="/books" class="btn btn-dark">Book</a>
+              </div>
+            </div>
+          </div>
+          <!-- Dentist Card -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="card">
+              <img src="images/dentist.jpg" class="card-img-top" alt="Dentist">
+              <div class="card-body">
+                <h4 class="card-title">Dentist</h4>
+                <a href="/books" class="btn btn-dark">Book</a>
+              </div>
+            </div>
+          </div>
+          <!-- Gynecologist Card -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="card">
+              <img src="images/gynecology.jpg" class="card-img-top" alt="Gynecologist">
+              <div class="card-body">
+                <h4 class="card-title">Gynecologist</h4>
+                <a href="/books" class="btn btn-dark">Book</a>
+              </div>
+            </div>
+          </div>
+          <!-- Neurologist Card -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="card">
+              <img src="images/neurologist.avif" class="card-img-top" alt="Neurologist">
+              <div class="card-body">
+                <h4 class="card-title">Neurologist</h4>
+                <a href="/books" class="btn btn-dark">Book</a>
+              </div>
+            </div>
+          </div>
+          <!-- Physiotherapist Card -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="card">
+              <img src="images/physiotherpy.avif" class="card-img-top" alt="Physiotherapist">
+              <div class="card-body">
+                <h4 class="card-title">Physiotherapist</h4>
+                <a href="/books" class="btn btn-dark">Book</a>
+              </div>
+            </div>
+          </div>
+          <!-- Urologist Card -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="card">
+              <img src="images/urologist.avif" class="card-img-top" alt="Urologist">
+              <div class="card-body">
+                <h4 class="card-title">Urologist</h4>
+                <a href="/books" class="btn btn-dark">Book</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </body>
+</html>

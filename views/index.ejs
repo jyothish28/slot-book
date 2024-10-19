@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Hospital</title>
+    <style>
+        body {
+            background-color: rgb(8, 8, 8);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            width: 100%;
+            height: 60px;
+            background-color: black;
+            color: aliceblue;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 1px solid aliceblue;
+            font-size: 1.3rem;
+        }
+        .header h1 {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .header svg {
+            margin-right: 10px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: aliceblue;
+            min-height: calc(100vh - 60px);
+            padding: 20px;
+            text-align: center;
+        }
+        .heading {
+            margin-bottom: 30px;
+        }
+        .heading h1 {
+            font-size: 5rem;
+            margin: 0;
+            animation: slideIn 3s ease-in-out;
+            text-shadow: 0 0 20px #4d4b4b, 0 0 40px #605c5c;
+        }
+        .heading p {
+            margin-top: 10px;
+            animation: slideIn 3s ease-in-out;
+            text-shadow: 0 0 20px #4d4b4b, 0 0 40px #605c5c;
+        }
+        .login {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border: 2px solid aliceblue;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 2px solid aliceblue;
+            background-color: transparent;
+            color: aliceblue;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: aliceblue;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #e0e0e0;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-around;
+                text-align: left;
+            }
+            .heading {
+                width: 50%;
+            }
+            .login {
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-command" viewBox="0 0 16 16">
+                <path d="M3.5 2A1.5 1.5 0 0 1 5 3.5V5H3.5a1.5 1.5 0 1 1 0-3M6 5V3.5A2.5 2.5 0 1 0 3.5 6H5v4H3.5A2.5 2.5 0 1 0 6 12.5V11h4v1.5a2.5 2.5 0 1 0 2.5-2.5H11V6h1.5A2.5 2.5 0 1 0 10 3.5V5zm4 1v4H6V6zm1-1V3.5A1.5 1.5 0 1 1 12.5 5zm0 6h1.5a1.5 1.5 0 1 1-1.5 1.5zm-6 0v1.5A1.5 1.5 0 1 1 3.5 11z"/>
+            </svg>
+            ABC Hospital
+        </h1>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h1>Welcome to ABC Hospital</h1>
+            <p>Book your appointment slot easily and avoid waiting!</p>
+        </div>
+        <div class="login">
+            <form action="/submit" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter Full Name" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
